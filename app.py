@@ -130,7 +130,7 @@ if file_mileage and file_service and file_config:
             # --- ปุ่ม Export พนักงานที่ต้องเข้าศูนย์ ---
             st.subheader("💾 ส่งออกรายงาน (Export)")
             export_df = alerts[['ชื่อ-นามสกุล', 'ป้ายทะเบียนรถ', 'ระยะห่าง', 'เลขไมล์สิ้นสุด', 'เลขไมล์เข้าศูนย์บริการรอบถัดไป', 'to']].copy()
-            export_df['ผู้จัดทำ'] = "ITsupportR4"
+            export_df['ผู้จัดทำ'] = "บุคคลและธุรการป้อมนำR4"
             csv = export_df.to_csv(index=False).encode('utf-8-sig')
             
             st.download_button(
